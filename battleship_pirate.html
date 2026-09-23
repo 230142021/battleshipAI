@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Морской бой — Ocean Fight</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="hero">
+  <img class="hero-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Uss_iowa_bb-61_pr.jpg?width=1400" alt="Линкор USS Iowa ведёт огонь бортовым залпом" loading="eager">
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <div class="hero-ship-icon" aria-hidden="true">⚓</div>
+    <p class="hero-eyebrow">🏴‍☠️ PIRATE FLEET</p>
+    <h1>OCEAN FIGHT</h1>
+    <p class="hero-sub">Потопите вражеский флот раньше, чем враг потопит ваш</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <p id="status" class="status">Стреляйте по полю противника — кликните по клетке справа</p>
+
+  <section class="fleet-legend" aria-label="Состав флота">
+    <div class="fleet-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Uss_iowa_bb-61_pr.jpg?width=300" alt="Линкор" loading="lazy">
+      <div class="fleet-card-info">
+        <span class="fleet-name">Линкор</span>
+        <span class="fleet-size">3 клетки · ×1</span>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photograph_of_a_cargo_ship.jpg?width=300" alt="Крейсер" loading="lazy">
+      <div class="fleet-card-info">
+        <span class="fleet-name">Крейсер</span>
+        <span class="fleet-size">2 клетки · ×2</span>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/INS_Vagsheer.jpg?width=300" alt="Катер" loading="lazy">
+      <div class="fleet-card-info">
+        <span class="fleet-name">Катер</span>
+        <span class="fleet-size">1 клетка · ×2</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="boards">
+    <div class="board-block">
+      <h2>Ваш флот</h2>
+      <div class="grid" id="playerGrid"></div>
+    </div>
+    <div class="board-block">
+      <h2>Поле противника</h2>
+      <div class="grid enemy" id="enemyGrid"></div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <button class="action primary" id="newGameBtn">Новая игра</button>
+    <button class="action" id="soundBtn">🔊 Звук: вкл</button>
+  </div>
+
+  <p class="legend">Серые клетки — ваши корабли (компьютер стреляет по ним). Красный взрыв — попадание, точка — промах.</p>
+
+  <p class="credit">Фотографии кораблей: Wikimedia Commons, общественное достояние / открытая лицензия.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
